@@ -1,6 +1,6 @@
 // The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
 // For example, given the set {1, 2, 3}, it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
-//            421
+// i          421
 // 0 => 00000 000
 // 1 => 00000 001
 // 2 => 00000 010
@@ -13,11 +13,10 @@
 function comb(arr){
     let temp;
     let res=[]
-    let size = arr.length
-    for(let i=0;i<Math.pow(2,size);i++){
+    for(let i=0;i<Math.pow(2,arr.length);i++){   // 0-7   --subset length
         temp=""
-        for(let j=0;j<size;j++){
-            if((i & Math.pow(2,j))){
+        for(let j=0;j<arr.length;j++){           // 0-2   --arr length
+            if((i & Math.pow(2,j))){            //  2^0=1 2^1=2 2^2=4 
                 temp = temp + arr[j]
             }
         }
