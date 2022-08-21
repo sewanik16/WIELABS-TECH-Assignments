@@ -2,10 +2,10 @@
 // For example, if A is abcde and B is cdeab, return true. If A is abc and B is acb, return false.
 
 function checkSTR(A,B){
-    A = A.split("")
-    let j = A.length
+    A = A.split("")      // ['a','b','c','d','e']
+    let j = A.length     // 5
     while(j>0){
-        if(A.join("")==B) return true
+        if(A.join("")==B) return true   // abcde
         let x = A[A.length-1];
         for(let i=A.length-2;i>=0;i--){
             A[i+1]=A[i]
@@ -14,7 +14,6 @@ function checkSTR(A,B){
         j--
     }
      return false
-
 }
 
 let A = "abcde"

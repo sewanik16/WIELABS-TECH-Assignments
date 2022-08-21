@@ -5,13 +5,12 @@
 
 function check10(n){
     let sum = 0
-    for(let i=0;i<n.length;i++){
+    for(let i=0;i<n.length;i++)
         sum = sum + parseInt(n[i])
-    }
-    if(sum<10){
-        let res = n + (10-sum)
-        return res
-    }
+    
+    if(sum<10)
+        return n + (10-sum)
+    
 }
 let n = "2"
 console.log(check10(n));

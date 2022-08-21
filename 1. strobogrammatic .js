@@ -20,7 +20,7 @@ function strobogrammatic(num){
     return true
 }
 
-let num = "19861"
+let num = "11811"
 console.log(strobogrammatic(num))
 
 
