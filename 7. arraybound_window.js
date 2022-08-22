@@ -33,7 +33,7 @@ function checkArr(arr){
   console.log("array is already sorted")
 }
 
-let arr = [3,2,9,5,9];
+let arr = [3,5,7,10];
 checkArr(arr);
 
 

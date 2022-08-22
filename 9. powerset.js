@@ -17,15 +17,27 @@ function comb(arr){
         temp=""
         for(let j=0;j<arr.length;j++){           // 0-2   --arr length
             if((i & Math.pow(2,j))){            //  2^0=1 2^1=2 2^2=4 
-                temp = temp + arr[j]
+                temp =  temp + arr[j]
             }
         }
-        res.push(temp)
+        res.push('{'+temp+'}')
     }
+    
     return res
 }
-let arr = [1,2,3]
-console.log(comb(arr))
+
+let arr = [1,2,3,4]
+let newarr = comb(arr)
+// for(let i=1;i<newarr.length;i++){
+//     if(newarr[i-1].length>newarr[i].length){
+//        let temp = newarr[i-1]
+//        newarr[i-1]=newarr[i]
+//        newarr[i] = temp
+//     }
+// }
+// console.log(newarr)
+let set = new Set(newarr)
+console.log(set)
 
 // let set = new Set()
 // let arr = [1,2,3]
